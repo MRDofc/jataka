@@ -1,7 +1,0 @@
-const jataka = require('@mr-dinesh/jataka-tales');
-
-const data = jataka.getByNumber(5);
-
-console.log(data.title); // "විසන්තර ජාතකය"
-console.log(data.story); // Sinhala text
-console.log(data.image); // Image URL
