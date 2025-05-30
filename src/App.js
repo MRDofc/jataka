@@ -1,58 +1,45 @@
 import React, { useState } from "react";
+import "./index.css";
 
-const App = () => {
+function App() {
   const [name, setName] = useState("");
-  const [submittedName, setSubmittedName] = useState("");
+  const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (name.trim() !== "") {
-      setSubmittedName(name.trim());
+  const handleSubmit = () => {
+    if (name.trim()) {
+      setSubmitted(true);
     }
   };
 
   return (
-    <div style={{ textAlign: "center", marginTop: "50px", fontFamily: "Arial, sans-serif" }}>
-      {!submittedName ? (
-        <form onSubmit={handleSubmit}>
-          <h2>Enter your name:</h2>
+    <div style={{ textAlign: "center", paddingTop: "100px" }}>
+      {!submitted ? (
+        <div>
+          <h1>Enter your name</h1>
           <input
             type="text"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            placeholder="Type your name here"
-            style={{ padding: "10px", fontSize: "16px" }}
+            placeholder="Enter your name"
+            className="name-input"
           />
           <br />
-          <button
-            type="submit"
-            style={{
-              marginTop: "15px",
-              padding: "10px 20px",
-              fontSize: "16px",
-              cursor: "pointer",
-            }}
-          >
+          <button onClick={handleSubmit} style={{ marginTop: "20px", padding: "10px 20px" }}>
             Submit
           </button>
-        </form>
+        </div>
       ) : (
-        <>
-          <h1>Welcome, {submittedName}!</h1>
-          <div style={{ marginTop: "30px" }}>
-            <video
-              src="https://files.catbox.moe/81jyq0.mp4"
-              autoPlay
-              muted
-              loop
-              style={{ maxWidth: "80%", borderRadius: "10px" }}
-            ></video>
-          </div>
-          <h3 style={{ marginTop: "10px", color: "#333" }}>Beloved Team</h3>
-        </>
+        <div>
+          <h1>Welcome, {name}!</h1>
+          <video width="320" height="240" autoPlay muted loop>
+            <source src="https://files.catbox.moe/81jyq0.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <h2>Beloved Team</h2>
+        </div>
       )}
     </div>
   );
-};
+}
 
 export default App;
