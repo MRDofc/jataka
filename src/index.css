@@ -3,5 +3,14 @@ body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-  background-color: rgb(240, 248, 255); /* AliceBlue (light blue) */
+  background-color: rgb(240, 248, 255); /* AliceBlue - light blue background */
+}
+
+/* Input field styling */
+.name-input {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: rgb(255, 255, 204); /* Light yellow background */
 }
