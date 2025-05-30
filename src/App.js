@@ -41,7 +41,7 @@ const App = () => {
           <h1>Welcome, {submittedName}!</h1>
           <div style={{ marginTop: "30px" }}>
             <video
-              src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm"
+              src="https://files.catbox.moe/81jyq0.mp4"
               autoPlay
               muted
               loop
