@@ -48,7 +48,7 @@ const App = () => {
               style={{ maxWidth: "80%", borderRadius: "10px" }}
             ></video>
           </div>
-          <h3 style={{ marginTop: "10px", color: "#333" }}>Beloved Team</h3>
+          <h3 style={{ marginTop: "10px", color: "#333" }}>LOVE YOU MY FREINDS</h3>
         </>
       )}
     </div>
